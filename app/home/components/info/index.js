@@ -186,7 +186,8 @@ export default function Info() {
               </p>
             </div>
           </BentoCell>
-          <BentoCell className="col-start-2 row-start-2 row-span-2 block overflow-hidden">
+
+          <BentoCell className="grid grid-rows-[1fr_auto] col-start-2 row-start-2 row-span-2 overflow-hidden">
             <DVDScreen />
 
             <div className="px-[7.5vw] py-[6vw]">

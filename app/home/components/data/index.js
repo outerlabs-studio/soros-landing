@@ -87,7 +87,7 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className="text-xl font-medium leading-none">SOROS has</p>
               <div>
-                <p className="text-7xl font-medium leading-none">
+                <p className="text-8xl font-medium leading-none">
                   No <span className="text-9xl text-light-purple">KYC</span>
                 </p>
               </div>
@@ -101,8 +101,8 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className="text-xl font-medium leading-none">SOROS has</p>
               <div>
-                <p className="text-7xl font-medium leading-none">
-                  No <span className="text-9xl text-light-purple">Data</span>
+                <p className="text-8xl font-medium leading-none">
+                  No <span className="text-9xl text-light-purple">DATA</span>
                 </p>
               </div>
               <p className="text-xl font-medium">

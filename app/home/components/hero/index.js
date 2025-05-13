@@ -126,7 +126,11 @@ export default function Hero() {
           },
           0,
         )
-        .to(sectionEl.current, { autoAlpha: 0, duration: 4, ease: 'linear' })
+        .to(
+          sectionEl.current,
+          { autoAlpha: 0, duration: 4, ease: 'linear' },
+          '<60%',
+        )
         .from(document.getElementById('nav-logo'), {
           autoAlpha: 0,
           duration: 1,
@@ -149,14 +153,14 @@ export default function Hero() {
             <br />
             of Shopping
             <br />
-            is Crypto
+            is Crypto.
           </h1>
           <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-text-2 font-medium text-[8vw] text-center leading-tight text-white">
-            Shop and
+            Pay Securely.
             <br />
-            Pay With
+            Shop Globally.
             <br />
-            Crypto
+            All in crypto.
           </h1>
         </div>
         <Form />
