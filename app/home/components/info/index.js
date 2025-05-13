@@ -111,7 +111,6 @@ export default function Info() {
           end: `bottom center+=25%`,
           pinSpacing: false,
           scrub: true,
-          markers: true,
         },
       })
 

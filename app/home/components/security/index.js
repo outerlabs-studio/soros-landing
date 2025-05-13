@@ -80,7 +80,7 @@ const Security = () => {
           },
           '<70%',
         )
-        .to(sectionRef.current, { autoAlpha: 0 }, '<80%')
+        .to(sectionRef.current, { autoAlpha: 0 }, '<70%')
     },
     { dependencies: [sectionRef], scope: sectionRef },
   )

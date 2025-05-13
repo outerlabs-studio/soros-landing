@@ -27,7 +27,7 @@ export default function Data() {
       const master = gsap.timeline({
         scrollTrigger: {
           trigger: sectionEl.current,
-          start: `top bottom`,
+          start: `top-=10% bottom`,
           end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} top`,
           scrub: true,
           pinSpacing: false,
@@ -64,7 +64,7 @@ export default function Data() {
   return (
     <section ref={sectionEl} className="relative -mt-[100vh]">
       <Container>
-        <Grid>
+        <Grid className="text-header">
           <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 mb-12">
             Your Wallet.
             <br />
