@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react'
 import SplitText from 'gsap/dist/SplitText'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { Icons } from 'components'
+import Form from './form'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, useGSAP)
 
@@ -25,21 +26,6 @@ export default function Hero() {
         charsClass: 'block',
         linesClass: 'overflow-hidden -mt-10',
       })
-
-      const splitAboutFirst = SplitText.create(
-        document.getElementById('about-anim-text-1'),
-        {
-          charsClass: 'block',
-          linesClass: 'overflow-hidden -mt-1',
-        },
-      )
-      const splitAboutSecond = SplitText.create(
-        document.getElementById('about-anim-text-2'),
-        {
-          charsClass: 'block',
-          linesClass: 'overflow-hidden -mt-1',
-        },
-      )
 
       gsap.from(splitFirst.words, {
         y: 130,
@@ -100,16 +86,17 @@ export default function Hero() {
         },
       })
 
-      tl.to(
-        splitFirst.words,
-        {
-          autoAlpha: 0,
-          duration: 1.5,
-          stagger: 0.1,
-          ease: 'power3.out',
-        },
-        0,
-      )
+      tl.to('.anim-form', { autoAlpha: 0, duration: 1.5 }, 0)
+        .to(
+          splitFirst.words,
+          {
+            autoAlpha: 0,
+            duration: 1.5,
+            stagger: 0.1,
+            ease: 'power3.out',
+          },
+          0,
+        )
         .from(
           splitSecond.words,
           {
@@ -154,22 +141,26 @@ export default function Hero() {
       id="hero-section"
       className="relative h-dvh overflow-hidden z-5"
     >
-      <Container>
-        <h1 className="anim-text-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium text-9xl text-center leading-tight text-white">
-          The Future
-          <br />
-          of Shopping
-          <br />
-          is Crypto
-        </h1>
-        <h1 className="anim-text-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium text-9xl text-center leading-tight text-white">
-          Shop and
-          <br />
-          Pay With
-          <br />
-          Crypto
-        </h1>
-      </Container>
+      <div className="grid items-center justify-items-center grid-rows-3 absolute top-0 left-0 w-full h-full">
+        <div />
+        <div>
+          <h1 className="anim-text-1 font-medium text-[8vw] text-center leading-tight text-white">
+            The Future
+            <br />
+            of Shopping
+            <br />
+            is Crypto
+          </h1>
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-text-2 font-medium text-[8vw] text-center leading-tight text-white">
+            Shop and
+            <br />
+            Pay With
+            <br />
+            Crypto
+          </h1>
+        </div>
+        <Form />
+      </div>
 
       <div className="anim-icon pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[140vw] origin-center">
         <Icons className="w-full h-full" name="soros-icon" />

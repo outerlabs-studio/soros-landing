@@ -11,8 +11,26 @@ export default function CustomButton({
   ref,
   onClick,
   children,
+  className,
+  staticAnim,
   ...props
 }) {
+  const classes = twMerge(
+    'relative w-fit py-2 px-5 flex items-center justify-center gap-3 rounded-xl text-xs font-normal transform transition-all duration-300 ease-in-out hover:cursor-pointer',
+    secondary && 'bg-dark-gray text-white',
+    primary && `bg-purple text-white`,
+    staticAnim ? `hover:opacity-80` : `hover:-translate-y-1`,
+    className,
+  )
+
+  if (!href || typeof href !== 'string') {
+    return (
+      <button className={classes} {...props}>
+        {children}
+      </button>
+    )
+  }
+
   const isExternal =
     href.startsWith('http') ||
     href.startsWith('mailto') ||
@@ -26,11 +44,7 @@ export default function CustomButton({
 
   return (
     <Link
-      className={twMerge(
-        'relative w-fit py-2 px-5 flex items-center justify-center gap-3 rounded-xl text-xs font-normal hover:-translate-y-1 transform transition-all duration-300 ease-in-out',
-        secondary && 'bg-dark-gray text-white',
-        primary && `bg-purple text-white`,
-      )}
+      className={classes}
       ref={ref}
       onClick={(e) => {
         onClick?.(e)
