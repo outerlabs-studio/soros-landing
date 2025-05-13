@@ -1,0 +1,105 @@
+'use client'
+
+import { useRef } from 'react'
+import { Bento, BentoCell, BentoContainer, Container, Grid } from 'styles'
+import DVDScreen from './dvd'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import SplitText from 'gsap/dist/SplitText'
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText)
+
+export default function About() {
+  const sectionEl = useRef(null)
+
+  useGSAP(
+    () => {
+      const splitFirst = SplitText.create('.anim-text-1', {
+        charsClass: 'block',
+        linesClass: 'overflow-hidden -mt-1',
+      })
+      const splitSecond = SplitText.create('.anim-text-2', {
+        charsClass: 'block',
+        linesClass: 'overflow-hidden -mt-1',
+      })
+
+      const master = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionEl.current,
+          start: `top bottom`,
+          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} top`,
+          scrub: true,
+          pinSpacing: false,
+        },
+      })
+
+      master
+        .from(
+          splitFirst.words,
+          {
+            y: 130,
+            duration: 2.5,
+            stagger: 0.1,
+            ease: 'power3.out',
+            autoAlpha: 0,
+          },
+          0,
+        )
+        .from(
+          splitSecond.words,
+          {
+            y: 130,
+            duration: 1.5,
+            stagger: 0.02,
+            ease: 'power3.out',
+            autoAlpha: 0,
+          },
+          0,
+        )
+    },
+    { dependencies: [sectionEl], scope: sectionEl },
+  )
+
+  return (
+    <section
+      ref={sectionEl}
+      id="about-section"
+      className="relative z-20 -mt-[100vh]"
+    >
+      <Container>
+        <Grid className="text-header">
+          <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 mb-12">
+            The World’s First Decentralized Marketplace.
+          </h2>
+          <p className="anim-text-2 about-anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">
+            SOROS is the world’s first online marketplace that connects global
+            crypto consumers with sellers, creating an easy, secure way to shop
+            with crypto. Every store on our marketplace is thoroughly vetted, so
+            you can buy with peace of mind, knowing you're dealing with trusted
+            sellers.
+          </p>
+        </Grid>
+      </Container>
+
+      <BentoContainer>
+        <Bento>
+          <DVDScreen />
+
+          <BentoCell className="px-[7.5vw] py-[6vw]">
+            <p className="text-2xl leading-tight text-gray-text font-medium">
+              SOROS is a decentralized marketplace built for the future of
+              shopping. No banks, no borders, no middlemen. Buyers can check out
+              using <span className="text-white">any major cryptocurrency</span>
+              , including Ethereum, Bitcoin, and Solana, making transactions
+              fast, secure, and truly global. With blockchain at its core, SOROS
+              empowers users to{' '}
+              <span className="text-white">shop freely and transparently</span>,
+              all while keeping full control of their wallets.
+            </p>
+          </BentoCell>
+        </Bento>
+      </BentoContainer>
+    </section>
+  )
+}

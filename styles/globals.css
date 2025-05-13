@@ -1,0 +1,97 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --color-black: oklch(0.16 0 0);
+  --color-white: oklch(0.97 0 0);
+  --color-dark-gray: oklch(0.3 0 0);
+  --color-light-gray: oklch(0.38 0.005 286.16);
+  --color-gray-text: oklch(0.54 0.008 286.1);
+  --color-purple: oklch(0.44 0.2466 288.09);
+  --color-light-purple: oklch(0.65 0.2168 297.98);
+  --full-height: calc(var(--dvh) * 100);
+}
+
+@theme inline {
+  --font-soros: var(--font-soros);
+}
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translate3d(calc(var(--offset) * -1), 0, 0);
+    }
+    100% {
+      transform: translate3d(calc(-100% - var(--offset)), 0, 0);
+    }
+  }
+  @keyframes marquee-inverted {
+    0% {
+      transform: translate3d(calc(-100% - var(--offset)), 0, 0);
+    }
+    100% {
+      transform: translate3d(calc(var(--offset) * -1), 0, 0);
+    }
+  }
+
+  /* animation utilities */
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+  .animate-marquee-inverted {
+    animation: marquee-inverted var(--duration) linear infinite;
+  }
+
+  /* respect reduced motion */
+  @variants motion-reduce {
+    .animate-marquee,
+    .animate-marquee-inverted {
+      animation-duration: 50s !important;
+    }
+  }
+}
+:root {
+  overscroll-behavior: none;
+}
+
+body::selection {
+  color: var(--color-purple);
+  background: var(--color-light-purple);
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-soros);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizelegibility;
+}
+#main {
+  opacity: 0;
+  visibility: hidden;
+}
+.elastica .wrapper {
+  position: absolute;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  user-select: none;
+  cursor: grab;
+  touch-action: none;
+}
