@@ -1,8 +1,9 @@
 import { RealViewport } from 'lib'
 import { sorosSans } from 'styles'
+import { Lenis } from 'components'
+import { Analytics } from '@vercel/analytics/next'
 
 import '/styles/globals.css'
-import { Lenis } from 'components'
 
 const title = 'SOROS | The Future of Shopping is Crypto'
 const description = ``
@@ -89,6 +90,7 @@ export default function RootLayout({ children }) {
         {children}
         <RealViewport />
         <Lenis root />
+        <Analytics />
       </body>
     </html>
   )
