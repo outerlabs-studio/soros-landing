@@ -100,17 +100,6 @@ export default function Hero() {
         },
       })
 
-      console.log(splitAboutFirst.words)
-
-      // ScrollTrigger.create({
-      //   trigger: sectionEl.current,
-      //   start: 'top+=3000 top',
-      //   end: 'bottom top',
-      //   pin: true,
-      //   pinSpacing: false,
-      //   immediateRender: false,
-      // })
-
       tl.to(
         splitFirst.words,
         {
