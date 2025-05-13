@@ -102,6 +102,43 @@ export default function Info() {
     { dependencies: [sectionEl], scope: sectionEl },
   )
 
+  useGSAP(
+    () => {
+      const master = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.anim-bars',
+          start: `top bottom`,
+          end: `bottom center+=25%`,
+          pinSpacing: false,
+          scrub: true,
+          markers: true,
+        },
+      })
+
+      master
+        .from(
+          gsap.utils.toArray('.anim-bar'),
+          {
+            width: 0,
+            duration: 2.5,
+            stagger: 0.1,
+            ease: 'power3.out',
+          },
+          0,
+        )
+        .from(
+          '.anim-bars p',
+          {
+            autoAlpha: 0,
+            ease: 'power3.out',
+            duration: 1,
+          },
+          '<50%',
+        )
+    },
+    { dependencies: [sectionEl], scope: sectionEl },
+  )
+
   return (
     <section
       id="info-section"
@@ -219,14 +256,14 @@ export default function Info() {
               transaction. More power in your hands.
             </p>
 
-            <div className="grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-[6vw] gap-x-8 gap-y-4 w-full">
+            <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-[6vw] gap-x-8 gap-y-4 w-full">
               <p className="text-3xl font-medium text-white">2.5%</p>
-              <div className="rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[25%]">
-                <p className="text-3xl font-medium text-white">SOROS Fees</p>
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[25%]">
+                <p className="text-3xl font-medium text-white">SOROS Fee</p>
               </div>
               <p className="text-3xl font-medium text-gray-text">7%</p>
-              <div className="rounded-xl flex items-center justify-center bg-dark-gray px-6 py-10 w-full">
-                <p className="text-3xl font-medium text-white">Other Fees</p>
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-dark-gray px-6 py-10 w-full">
+                <p className="text-3xl font-medium text-white">Others Fee</p>
               </div>
             </div>
           </BentoCell>
