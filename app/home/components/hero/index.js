@@ -153,7 +153,7 @@ export default function Hero() {
             <br />
             of Shopping
             <br />
-            is Crypto.
+            is Crypto
           </h1>
           <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-text-2 font-medium text-9xl text-center leading-tight text-white">
             Shop

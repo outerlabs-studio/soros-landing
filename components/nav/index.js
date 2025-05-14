@@ -5,6 +5,7 @@ import Icons from 'components/icons'
 import Link from 'next/link'
 import { useLenis } from 'lenis/react'
 import { Container } from 'styles'
+import { track } from '@vercel/analytics'
 
 export default function Nav() {
   const lenis = useLenis()
@@ -49,7 +50,13 @@ export default function Nav() {
             >
               About
             </Link>
-            <CustomButton primary href="/">
+            <CustomButton
+              primary
+              href="/"
+              onClick={() => {
+                track('Join', { location: 'navigation' })
+              }}
+            >
               Join Beta
             </CustomButton>
           </nav>

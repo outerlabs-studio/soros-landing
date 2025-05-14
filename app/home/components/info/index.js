@@ -162,7 +162,7 @@ export default function Info() {
       <BentoContainer>
         <Bento>
           <BentoCell className="col-span-2 px-[7.5vw] py-[6vw]">
-            <Marquee repeat={2} duration={10}>
+            <Marquee>
               {IMAGES.map((_, index) => (
                 <div className="relative h-120 w-70 mr-5" key={index}>
                   <Image
