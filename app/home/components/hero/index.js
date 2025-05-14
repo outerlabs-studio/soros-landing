@@ -17,7 +17,6 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      // ——— 1) Intro animations ———
       const splitFirst = SplitText.create('.anim-text-1', {
         charsClass: 'block',
         linesClass: 'overflow-hidden -mt-10',
@@ -27,19 +26,40 @@ export default function Hero() {
         linesClass: 'overflow-hidden -mt-10',
       })
 
-      gsap.from(splitFirst.words, {
-        y: 130,
-        duration: 1.5,
-        stagger: 0.1,
-        ease: 'power3.out',
-      })
-      gsap.from('.bracket', {
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power3.out',
-      })
+      const entry = gsap.timeline({ defaults: { delay: 0.5 } })
+
+      entry
+        .from(
+          splitFirst.words,
+          {
+            y: 130,
+            duration: 1.5,
+            stagger: 0.1,
+            ease: 'power3.out',
+          },
+          0,
+        )
+        .from(
+          '.bracket',
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: 'power3.out',
+          },
+          0,
+        )
+        .from(
+          '.anim-form',
+          { autoAlpha: 0, duration: 1, ease: 'power3.out' },
+          0,
+        )
+        .from(
+          document.getElementById('nav'),
+          { yPercent: -100, duration: 1, ease: 'power3.out' },
+          0,
+        )
 
       const spinTween = gsap.to('.anim-icon', {
         rotation: 360,

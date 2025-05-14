@@ -11,7 +11,10 @@ export default function Nav() {
   const lenis = useLenis()
 
   return (
-    <header className="bg-black/70 border-b-1 border-b-light-gray border-solid backdrop-blur-md fixed top-0 w-full z-50 py-3">
+    <header
+      className="bg-black/70 border-b-1 border-b-light-gray border-solid backdrop-blur-md fixed top-0 w-full z-50 py-3"
+      id="nav"
+    >
       <Container>
         <div className="flex justify-between items-center">
           <Link
