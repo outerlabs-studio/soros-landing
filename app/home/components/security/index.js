@@ -30,7 +30,7 @@ const Security = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: 'bottom+=6000 bottom',
+          end: 'bottom+=4000 bottom',
           scrub: true,
           pin: sectionRef.current,
           immediateRender: false,

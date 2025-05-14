@@ -10,9 +10,8 @@ export default function Card({ className, title, description, img }) {
       )}
     >
       <div
-        className={`relative w-full h-100 overflow-hidden rounded-[inherit]`}
+        className={`relative w-full h-120 overflow-hidden rounded-[inherit]`}
       >
-        <div className="w-full h-full absolute top-0 left-0 bg-radial from-black/10 to-black z-10 rounded-t-xl" />
         <Image
           className="w-full h-full object-cover"
           src={img?.src}
