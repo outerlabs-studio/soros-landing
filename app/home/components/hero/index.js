@@ -168,14 +168,14 @@ export default function Hero() {
       <div className="grid items-center justify-items-center grid-rows-3 absolute top-0 left-0 w-full h-full">
         <div />
         <div>
-          <h1 className="anim-text-1 font-medium text-9xl text-center leading-tight text-white">
+          <h1 className="anim-text-1 font-bold text-9xl text-center leading-tight text-white">
             The Future
             <br />
             of Shopping
             <br />
             is Crypto
           </h1>
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-text-2 font-medium text-9xl text-center leading-tight text-white">
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-text-2 font-bold text-9xl text-center leading-tight text-white">
             Shop
             <br />
             Globally

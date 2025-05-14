@@ -13,7 +13,7 @@ export default function Form() {
             Join Waitlist
           </CustomButton>
         </div>
-        <p className="text-xs text-gray-text">
+        <p className="text-xs font-medium text-gray-text">
           Over <span className="text-white">50,000</span> others have already
           joined
         </p>

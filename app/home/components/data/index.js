@@ -65,7 +65,7 @@ export default function Data() {
     <section ref={sectionEl} className="relative -mt-[100vh]">
       <Container>
         <Grid className="text-header">
-          <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 mb-12">
+          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
             Your Wallet.
             <br />
             Your Data.
@@ -87,7 +87,7 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className="text-xl font-medium leading-none">SOROS has</p>
               <div>
-                <p className="text-8xl font-medium leading-none">
+                <p className="text-8xl font-bold leading-none">
                   No <span className="text-9xl text-light-purple">KYC</span>
                 </p>
               </div>
@@ -101,7 +101,7 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className="text-xl font-medium leading-none">SOROS has</p>
               <div>
-                <p className="text-8xl font-medium leading-none">
+                <p className="text-8xl font-bold leading-none">
                   No <span className="text-9xl text-light-purple">DATA</span>
                 </p>
               </div>

@@ -69,7 +69,7 @@ export default function About() {
     >
       <Container>
         <Grid className="text-header">
-          <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 mb-12">
+          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
             The World’s First Decentralized Marketplace.
           </h2>
           <p className="anim-text-2 about-anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">

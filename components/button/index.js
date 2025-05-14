@@ -16,7 +16,7 @@ export default function CustomButton({
   ...props
 }) {
   const classes = twMerge(
-    'relative w-fit py-2 px-5 flex items-center justify-center gap-3 rounded-xl text-xs font-normal transform transition-all duration-300 ease-in-out hover:cursor-pointer',
+    'relative w-fit py-2 px-5 flex items-center justify-center gap-3 rounded-xl text-xs font-medium transform transition-all duration-300 ease-in-out hover:cursor-pointer',
     secondary && 'bg-dark-gray text-white',
     primary && `bg-purple text-white`,
     staticAnim ? `hover:opacity-80` : `hover:-translate-y-1`,

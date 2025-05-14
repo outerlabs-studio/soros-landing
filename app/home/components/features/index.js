@@ -63,7 +63,7 @@ export default function Features() {
     <section className="relative pt-[6vw]" id="features-section">
       <Container>
         <Grid className="gap-y-5">
-          <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 py-[6vw]">
+          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 py-[6vw]">
             You Dream It. SOROS Got It.
           </h2>
 

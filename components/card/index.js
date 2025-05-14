@@ -20,7 +20,7 @@ export default function Card({ className, title, description, img }) {
         />
       </div>
       <div className="w-full px-8 py-8">
-        <h3 className="text-5xl leading-none font-medium mb-4">{title}</h3>
+        <h3 className="text-5xl leading-none font-bold mb-4">{title}</h3>
         <p className="text-xl leading-tight font-medium">{description}</p>
       </div>
     </div>

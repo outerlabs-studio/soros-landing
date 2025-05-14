@@ -146,7 +146,7 @@ export default function Info() {
     >
       <Container>
         <Grid>
-          <h2 className="anim-text-1 text-9xl font-medium col-start-1 col-end-13 mb-12">
+          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
             Works Just Like Your Favorite Online Stores.
           </h2>
           <p className="anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">
@@ -205,7 +205,7 @@ export default function Info() {
               />
             </div>
             <div>
-              <h3 className="text-5xl leading-tight font-medium mb-8">
+              <h3 className="text-5xl leading-tight font-bold mb-8">
                 Seamlessly Crypto.
                 <br />
                 Familiarly Shopping.
@@ -227,7 +227,7 @@ export default function Info() {
             <DVDScreen />
 
             <div className="px-[7.5vw] py-[6vw]">
-              <h3 className="text-5xl leading-tight font-medium mb-8">
+              <h3 className="text-5xl leading-tight font-bold mb-8">
                 Every Category
                 <br />
                 You Need.

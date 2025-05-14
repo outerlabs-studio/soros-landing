@@ -32,7 +32,7 @@ export default function Nav() {
 
           <nav className="flex gap-5 items-center">
             <Link
-              className="text-xs font-normal hover:opacity-60 transition-opacity duration-300"
+              className="text-xs font-medium hover:opacity-60 transition-opacity duration-300"
               href="#features-section"
               onClick={(e) => {
                 e.preventDefault()
@@ -43,7 +43,7 @@ export default function Nav() {
               Features
             </Link>
             <Link
-              className="text-xs font-normal hover:opacity-60 transition-opacity duration-300"
+              className="text-xs font-medium hover:opacity-60 transition-opacity duration-300"
               href="#about-section"
               onClick={(e) => {
                 e.preventDefault()
