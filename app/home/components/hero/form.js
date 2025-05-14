@@ -3,7 +3,7 @@ import { CustomButton, Input } from 'components'
 export default function Form() {
   return (
     <form className="w-1/4 max-w-md anim-form">
-      <div className="flex flex-col items-center gap-3 w-full">
+      <div className="flex flex-col items-center gap-3 w-full anim-inner-form">
         <div className="relative w-full">
           <Input id="email" name="email" type="email" placeholder="Email" />
           <CustomButton

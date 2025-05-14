@@ -106,7 +106,7 @@ export default function Hero() {
         },
       })
 
-      tl.to('.anim-form', { autoAlpha: 0, duration: 1.5 }, 0)
+      tl.to('.anim-inner-form', { autoAlpha: 0, duration: 1.5 }, 0)
         .to(
           splitFirst.words,
           {
