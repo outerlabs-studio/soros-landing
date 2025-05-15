@@ -35,7 +35,7 @@ export default function About() {
         scrollTrigger: {
           trigger: sectionEl.current,
           start: `top bottom`,
-          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} top`,
+          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} center`,
           scrub: true,
           pinSpacing: false,
         },

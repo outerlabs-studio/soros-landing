@@ -77,7 +77,7 @@ export default function Info() {
         scrollTrigger: {
           trigger: sectionEl.current,
           start: `top bottom`,
-          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} top`,
+          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} center`,
           scrub: true,
           pinSpacing: false,
         },
@@ -149,7 +149,7 @@ export default function Info() {
   return (
     <section
       id="info-section"
-      className="relative z-10 portrait:-mt-[50vw] -mt-[50vh]"
+      className="relative z-10 -mt-[50vh]"
       ref={sectionEl}
     >
       <Container>
@@ -256,7 +256,7 @@ export default function Info() {
               <span className="text-white">
                 SOROS keeps fees lower than anyone else.
               </span>{' '}
-              With just a 2.5% fee, you get a better deal than the 7% or more
+              With just a 3.5% fee, you get a better deal than the 7% or more
               charged by other crypto marketplaces. More value in every
               transaction. More power in your hands.
             </p>
