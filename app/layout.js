@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/next'
 import '/styles/globals.css'
 
 const title = 'SOROS | The Future of Shopping is Crypto'
-const description = ``
+const description = `SOROS is the world’s first online marketplace that connects global crypto consumers with sellers, creating an easy, secure way to shop with crypto.`
 
 export const metadata = {
   title: {
