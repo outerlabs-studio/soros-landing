@@ -262,8 +262,8 @@ export default function Info() {
             </p>
 
             <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
-              <p className={BigTextClass('text-white')}>2.5%</p>
-              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[35%] sm:w-[25%]">
+              <p className={BigTextClass('text-white')}>3.5%</p>
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[35%]">
                 <p className={BigTextClass('text-white')}>SOROS Fee</p>
               </div>
               <p className={BigTextClass('text-gray-text')}>7%</p>
