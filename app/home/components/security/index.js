@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Icons, Marquee } from 'components'
 import SplitText from 'gsap/dist/SplitText'
+import { HugeTextClass } from 'styles'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText)
 
@@ -95,13 +96,11 @@ const Security = () => {
         ref={marqueeWrapperRef}
       >
         <Marquee repeat={10} duration={4}>
-          <p className="anim-text text-5xl leading-tight font-medium mr-8">
-            Security built in.
-          </p>
+          <p className={HugeTextClass('anim-text mr-8')}>Security built in.</p>
         </Marquee>
       </div>
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden w-full h-full flex items-center justify-center "
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden w-full h-full flex items-center justify-center"
         ref={securityWrapperRef}
       >
         <div

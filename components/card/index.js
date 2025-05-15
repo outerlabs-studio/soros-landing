@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { HugeTextClass, SmallPTextClass } from 'styles'
 import { twMerge } from 'tailwind-merge'
 
 export default function Card({ className, title, description, img }) {
@@ -20,8 +21,8 @@ export default function Card({ className, title, description, img }) {
         />
       </div>
       <div className="w-full px-8 py-8">
-        <h3 className="text-5xl leading-none font-bold mb-4">{title}</h3>
-        <p className="text-xl leading-tight font-medium">{description}</p>
+        <h3 className={HugeTextClass('mb-4')}>{title}</h3>
+        <p className={SmallPTextClass()}>{description}</p>
       </div>
     </div>
   )

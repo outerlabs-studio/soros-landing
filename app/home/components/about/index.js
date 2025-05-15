@@ -1,7 +1,13 @@
 'use client'
 
 import { useRef } from 'react'
-import { Bento, BentoCell, BentoContainer, Container } from 'styles'
+import {
+  Bento,
+  BentoCell,
+  BentoContainer,
+  Container,
+  MediumPTextClass,
+} from 'styles'
 import DVDScreen from './dvd'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -82,7 +88,7 @@ export default function About() {
           <DVDScreen />
 
           <BentoCell className="px-[7.5vw] py-[6vw]">
-            <p className="text-2xl leading-tight text-gray-text font-medium">
+            <p className={MediumPTextClass('text-gray-text')}>
               SOROS is a decentralized marketplace built for the future of
               shopping. No banks, no borders, no middlemen. Buyers can check out
               using <span className="text-white">any major cryptocurrency</span>

@@ -6,6 +6,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import Link from 'next/link'
 import ReferralLink from './referral'
+import { HugeTextClass } from 'styles'
 
 const validationSchema = Yup.object({
   username: Yup.string().required('Username is required'),
@@ -85,7 +86,7 @@ export default function Form({ referral, email }) {
   return (
     <div id="form-wrapper" className="ml-[40vw] px-10 w-full">
       <div className="flex flex-col w-full min-h-full justify-center max-w-150 py-4 mx-auto">
-        <h3 className="text-5xl leading-13 font-bold mb-4">
+        <h3 className={HugeTextClass('mb-4')}>
           {success ? (
             `Welcome to SOROS`
           ) : (

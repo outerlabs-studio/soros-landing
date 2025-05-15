@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { HugeTextClass, SmallPTextClass } from 'styles'
 
 export default function Rankings() {
   const [data, setData] = useState([])
@@ -32,22 +33,24 @@ export default function Rankings() {
 
   return (
     <div className="col-start-8 col-end-13 py-20">
-      <h3 className="text-5xl leading-13 font-bold mb-8">Rankings</h3>
+      <h3 className={HugeTextClass('mb-8')}>Rankings</h3>
 
       <div
         data-lenis-prevent
         className="border border-dark-gray rounded-xl px-6 py-6 max-h-[400px] overflow-y-auto"
       >
         {isLoading ? (
-          <p className="text-center text-lg text-gray-text">Loading…</p>
+          <p className="text-center text-base text-gray-text">Loading…</p>
         ) : (
           <table className="w-full text-left">
             <thead>
               <tr className="border-b border-dark-gray">
-                <th className="pb-4 text-xl font-semibold text-gray-text">
+                <th className={SmallPTextClass('pb-4 text-gray-text')}>
                   Username
                 </th>
-                <th className="pb-4 text-xl font-semibold text-gray-text text-right">
+                <th
+                  className={SmallPTextClass('pb-4 text-gray-text text-right')}
+                >
                   Points
                 </th>
               </tr>
@@ -58,8 +61,10 @@ export default function Rankings() {
                   key={idx}
                   className="border-b border-dark-gray last:border-b-0"
                 >
-                  <td className="py-4 text-lg">{row.username}</td>
-                  <td className="py-4 text-lg text-right">{row.points}</td>
+                  <td className={SmallPTextClass('py-4')}>{row.username}</td>
+                  <td className={SmallPTextClass('py-4 text-right')}>
+                    {row.points}
+                  </td>
                 </tr>
               ))}
             </tbody>

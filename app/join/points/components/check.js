@@ -5,6 +5,7 @@ import { CustomButton, Input } from 'components'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import ReferralLink from '../../components/referral'
+import { HugeTextClass } from 'styles'
 
 const validationSchema = Yup.object({
   username: Yup.string().required('Username is required'),
@@ -53,7 +54,7 @@ export default function Check() {
 
   return (
     <div className="col-start-1 col-end-6 flex flex-col">
-      <h3 className="text-5xl leading-13 font-bold mb-4">Check Points</h3>
+      <h3 className={HugeTextClass('mb-4')}>Check Points</h3>
       {!success && (
         <p className="text-base leading-tight font-medium">
           Enter your username to check how many points you have

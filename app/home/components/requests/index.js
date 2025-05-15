@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { Container, Grid } from 'styles'
+import { BigPTextClass, Container, Grid, SmallPTextClass } from 'styles'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import OffersSVG from './offers'
@@ -158,14 +158,14 @@ const Product = () => {
             className="flex flex-col col-start-1 col-end-4"
             ref={(el) => paragraphRef.current.push(el)}
           >
-            <h3 className="anim-text-1 text-3xl text-white font-medium mb-5">
+            <h3 className={BigPTextClass('anim-text-1 text-white mb-5')}>
               Custom
               <br />
               Products
             </h3>
-            <p className="anim-text-1 text-xl text-gray-text font-medium">
+            <p className={SmallPTextClass('anim-text-1 text-gray-text')}>
               Send custom requests directly to verified sellers and get exactly
-              what you’re looking for
+              what you’re looking for.
             </p>
           </div>
 
@@ -177,12 +177,12 @@ const Product = () => {
             className="flex flex-col col-start-10 col-end-13"
             ref={(el) => paragraphRef.current.push(el)}
           >
-            <h3 className="anim-text-2 text-3xl text-white font-medium mb-5">
+            <h3 className={BigPTextClass('anim-text-2 text-white mb-5')}>
               Get Matched
               <br />
               With AI
             </h3>
-            <p className="anim-text-2 text-xl text-gray-text font-medium">
+            <p className={SmallPTextClass('anim-text-2 text-gray-text')}>
               SOROS AI intelligently matches your request with the best stores
               on the platform.
             </p>

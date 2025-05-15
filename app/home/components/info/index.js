@@ -2,7 +2,15 @@
 
 import { CustomHeading, Marquee } from 'components'
 import Image from 'next/image'
-import { Bento, BentoCell, BentoContainer, Container } from 'styles'
+import {
+  Bento,
+  BentoCell,
+  BentoContainer,
+  BigTextClass,
+  Container,
+  HugeTextClass,
+  SmallPTextClass,
+} from 'styles'
 import DVDScreen from './dvd'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -179,7 +187,7 @@ export default function Info() {
                 fill
               />
             </div>
-            <p className="text-xl leading-tight text-gray-text font-medium">
+            <p className={SmallPTextClass('text-gray-text')}>
               <span className="text-white">
                 Reviews hold every store accountable to the community.
               </span>{' '}
@@ -199,12 +207,12 @@ export default function Info() {
               />
             </div>
             <div>
-              <h3 className="text-5xl leading-tight font-bold mb-8">
+              <h3 className={HugeTextClass('mb-8')}>
                 Seamlessly Crypto.
                 <br />
                 Familiarly Shopping.
               </h3>
-              <p className="text-xl leading-tight text-gray-text font-medium">
+              <p className={SmallPTextClass('text-gray-text')}>
                 <span className="text-white">
                   Crypto is built directly into the SOROS platform.
                 </span>{' '}
@@ -221,12 +229,12 @@ export default function Info() {
             <DVDScreen />
 
             <div className="px-[7.5vw] py-[6vw]">
-              <h3 className="text-5xl leading-tight font-bold mb-8">
+              <h3 className={HugeTextClass('mb-8')}>
                 Every Category
                 <br />
                 You Need.
               </h3>
-              <p className="text-xl leading-tight text-gray-text font-medium">
+              <p className={SmallPTextClass('text-gray-text')}>
                 <span className="text-white">
                   SOROS has all the shopping categories you expect,
                 </span>{' '}
@@ -240,7 +248,7 @@ export default function Info() {
           </BentoCell>
 
           <BentoCell className="col-span-2 px-[7.5vw] py-[6vw] justify-start items-start">
-            <p className="text-xl leading-tight text-gray-text font-medium max-w-1/2">
+            <p className={SmallPTextClass('text-gray-text max-w-1/2')}>
               <span className="text-white">
                 SOROS keeps fees lower than anyone else.
               </span>{' '}
@@ -250,13 +258,13 @@ export default function Info() {
             </p>
 
             <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-[6vw] gap-x-8 gap-y-4 w-full">
-              <p className="text-3xl font-medium text-white">2.5%</p>
+              <p className={BigTextClass('text-white')}>2.5%</p>
               <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[25%]">
-                <p className="text-3xl font-medium text-white">SOROS Fee</p>
+                <p className={BigTextClass('text-white')}>SOROS Fee</p>
               </div>
-              <p className="text-3xl font-medium text-gray-text">7%</p>
+              <p className={BigTextClass('text-gray-text')}>7%</p>
               <div className="anim-bar rounded-xl flex items-center justify-center bg-dark-gray px-6 py-10 w-full">
-                <p className="text-3xl font-medium text-white">Others Fee</p>
+                <p className={BigTextClass('text-white')}>Others Fee</p>
               </div>
             </div>
           </BentoCell>

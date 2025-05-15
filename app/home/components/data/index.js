@@ -5,7 +5,18 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import SplitText from 'gsap/dist/SplitText'
-import { Bento, BentoCell, BentoContainer, Container, Grid } from 'styles'
+import {
+  AlmostDisplayTextClass,
+  Bento,
+  BentoCell,
+  BentoContainer,
+  Container,
+  DisplayTextClass,
+  Grid,
+  HugeTextClass,
+  MediumPTextClass,
+  SmallPTextClass,
+} from 'styles'
 import Image from 'next/image'
 import { CustomHeading } from 'components'
 
@@ -85,13 +96,16 @@ export default function Data() {
         <Bento>
           <BentoCell className="px-[7.5vw] py-[6vw] gap-[6vw]">
             <div className="flex flex-col items-center text-center">
-              <p className="text-xl font-medium leading-none">SOROS has</p>
+              <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className="text-8xl font-bold leading-none">
-                  No <span className="text-9xl text-light-purple">KYC</span>
+                <p className={AlmostDisplayTextClass()}>
+                  No{' '}
+                  <span className={DisplayTextClass('text-light-purple')}>
+                    KYC
+                  </span>
                 </p>
               </div>
-              <p className="text-xl font-medium leading-none">
+              <p className={SmallPTextClass()}>
                 verification. We’re crypto-based
                 <br />
                 from the beginning to the end.
@@ -99,13 +113,16 @@ export default function Data() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <p className="text-xl font-medium leading-none">SOROS has</p>
+              <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className="text-8xl font-bold leading-none">
-                  No <span className="text-9xl text-light-purple">DATA</span>
+                <p className={AlmostDisplayTextClass()}>
+                  No{' '}
+                  <span className={DisplayTextClass('text-light-purple')}>
+                    DATA
+                  </span>
                 </p>
               </div>
-              <p className="text-xl font-medium">
+              <p className={SmallPTextClass()}>
                 trackers. We don’t store or sell your
                 <br />
                 data. You’re always in control.
@@ -113,7 +130,7 @@ export default function Data() {
             </div>
           </BentoCell>
           <BentoCell className="relative px-[7.5vw] pt-[6vw] gap-[6vw] justify-between">
-            <p className="text-2xl leading-tight text-gray-text font-medium">
+            <p className={MediumPTextClass('text-gray-text')}>
               We use blockchain technology to record key transaction details
               without exposing any personal data.{' '}
               <span className="text-white">Every record is encrypted</span> and

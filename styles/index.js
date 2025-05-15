@@ -4,6 +4,7 @@ export { default as Grid } from './grid'
 export { BentoContainer, Bento, BentoCell } from './bento'
 export {
   DisplayTextClass,
+  AlmostDisplayTextClass,
   HugeTextClass,
   BigTextClass,
   BigPTextClass,
