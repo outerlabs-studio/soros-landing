@@ -1,8 +1,18 @@
 import { CustomButton, Input } from 'components'
+import { useRouter } from 'next/navigation'
 
 export default function Form() {
+  const router = useRouter()
+
   return (
-    <form className="w-1/4 max-w-md anim-form">
+    <form
+      className="w-1/4 max-w-md anim-form"
+      onSubmit={(e) => {
+        e.preventDefault()
+
+        router.push(`/join?email=${e.target.email.value}`)
+      }}
+    >
       <div className="flex flex-col items-center gap-3 w-full anim-inner-form">
         <div className="relative w-full">
           <input

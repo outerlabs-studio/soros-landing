@@ -32,7 +32,7 @@ function SuccessMessage({ data }) {
   )
 }
 
-export default function Form({ referral }) {
+export default function Form({ referral, email }) {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
 
@@ -44,7 +44,7 @@ export default function Form({ referral }) {
   const formik = useFormik({
     initialValues: {
       username: '',
-      email: '',
+      email: email || '',
       code: referral || '',
     },
     validationSchema,
