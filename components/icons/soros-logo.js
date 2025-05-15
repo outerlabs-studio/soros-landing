@@ -6,6 +6,7 @@ const IconSOROSLogo = forwardRef((props, ref) => (
     fill="none"
     viewBox="0 0 323 105"
     ref={ref}
+    aria-label="SOROS"
     {...props}
   >
     <g fill="#fff" clipPath="url(#soros-logo)">

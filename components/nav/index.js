@@ -6,9 +6,12 @@ import Link from 'next/link'
 import { useLenis } from 'lenis/react'
 import { Container } from 'styles'
 import { track } from '@vercel/analytics'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Nav() {
   const lenis = useLenis()
+  const pathname = usePathname()
+  const router = useRouter()
 
   return (
     <header
@@ -21,10 +24,11 @@ export default function Nav() {
             onClick={(e) => {
               e.preventDefault()
 
-              lenis.scrollTo(0)
+              if (pathname !== '/') router.push('/')
+              else lenis.scrollTo(0)
             }}
             id="nav-logo"
-            className="w-25"
+            className="w-28"
             href={'/'}
           >
             <Icons name="soros-logo" />
@@ -32,7 +36,7 @@ export default function Nav() {
 
           <nav className="flex gap-5 items-center">
             <Link
-              className="text-xs font-medium hover:opacity-60 transition-opacity duration-300"
+              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
               href="#features-section"
               onClick={(e) => {
                 e.preventDefault()
@@ -43,7 +47,7 @@ export default function Nav() {
               Features
             </Link>
             <Link
-              className="text-xs font-medium hover:opacity-60 transition-opacity duration-300"
+              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
               href="#about-section"
               onClick={(e) => {
                 e.preventDefault()
@@ -55,7 +59,7 @@ export default function Nav() {
             </Link>
             <CustomButton
               primary
-              href="/"
+              href="/join"
               onClick={() => {
                 track('Join', { location: 'navigation' })
               }}
