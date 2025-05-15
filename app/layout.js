@@ -36,7 +36,7 @@ export const metadata = {
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3000'
           : 'https://www.shopsoros.com'
-      }/images/og-image.jpg`,
+      }/og-image.jpg`,
       width: 1200,
       height: 630,
     },
@@ -45,13 +45,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: title,
     description: description,
-    creator: '@ricenter',
+    creator: '@shopsoros',
     images: [
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3000'
           : 'https://www.shopsoros.com'
-      }/images/og-image.jpg`,
+      }/og-image.jpg`,
     ],
   },
 }
