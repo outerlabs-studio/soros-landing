@@ -8,7 +8,7 @@ export default async function Join({ searchParams }) {
   const email = data?.email && data?.email.length > 0 ? data?.email : null
 
   return (
-    <section className="relative flex w-full min-h-dvh">
+    <section className="relative flex w-full min-h-screen">
       <Side />
 
       <Form referral={referral} email={email} />

@@ -181,7 +181,7 @@ const Product = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-dvh portrait:-mt-[50vw] -mt-[50vh] z-10"
+      className="relative h-(--full-height) portrait:-mt-[50vw] -mt-[50vh] z-10"
     >
       <Container>
         <Grid className="items-center justify-center">

@@ -168,7 +168,7 @@ export default function Side() {
   )
 
   return (
-    <div className="hidden md:block fixed w-[40vw] h-dvh top-0 left-0">
+    <div className="hidden md:block fixed w-[40vw] min-h-(--full-height) top-0 left-0">
       <div
         ref={containerRef}
         className="flex absolute top-0 left-0 w-full h-full gap-[2vw] justify-center items-center pointer-events-none inset-0 grid-rows-[auto] grid-cols-1 auto-cols-[1fr]"
