@@ -154,7 +154,7 @@ export default function Form({ referral, email }) {
 
             <Link
               href={'/join/points'}
-              className="text-xs text-gray-text underline mt-2 hover:no-underline w-fit"
+              className="text-xs text-light-purple underline mt-2 hover:no-underline w-fit"
             >
               Check your points or view global rankings
             </Link>
