@@ -1,12 +1,13 @@
 'use client'
 
 import { useRef } from 'react'
-import { Bento, BentoCell, BentoContainer, Container, Grid } from 'styles'
+import { Bento, BentoCell, BentoContainer, Container } from 'styles'
 import DVDScreen from './dvd'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import SplitText from 'gsap/dist/SplitText'
+import { CustomHeading } from 'components'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText)
 
@@ -68,18 +69,12 @@ export default function About() {
       className="relative z-20 -mt-[100vh]"
     >
       <Container>
-        <Grid className="text-header">
-          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
-            The World’s First Decentralized Marketplace.
-          </h2>
-          <p className="anim-text-2 about-anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">
-            SOROS is the world’s first online marketplace that connects global
-            crypto consumers with sellers, creating an easy, secure way to shop
-            with crypto. Every store on our marketplace is thoroughly vetted, so
-            you can buy with peace of mind, knowing you're dealing with trusted
-            sellers.
-          </p>
-        </Grid>
+        <CustomHeading
+          title={'The World’s First Decentralized Marketplace.'}
+          description={
+            "SOROS is the world’s first online marketplace that connects global crypto consumers with sellers, creating an easy, secure way to shop with crypto. Every store on our marketplace is thoroughly vetted, so you can buy with peace of mind, knowing you're dealing with trusted sellers."
+          }
+        />
       </Container>
 
       <BentoContainer>

@@ -1,8 +1,8 @@
 'use client'
 
-import { Marquee } from 'components'
+import { CustomHeading, Marquee } from 'components'
 import Image from 'next/image'
-import { Bento, BentoCell, BentoContainer, Container, Grid } from 'styles'
+import { Bento, BentoCell, BentoContainer, Container } from 'styles'
 import DVDScreen from './dvd'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -145,18 +145,12 @@ export default function Info() {
       ref={sectionEl}
     >
       <Container>
-        <Grid>
-          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
-            Works Just Like Your Favorite Online Stores.
-          </h2>
-          <p className="anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">
-            SOROS works just like your favorite online stores—browse products,
-            add to cart, and check out in seconds. You get real-time order
-            updates, verified sellers, and global shipping, all with the
-            simplicity you’re used to—only smarter, safer, and built for the
-            future.
-          </p>
-        </Grid>
+        <CustomHeading
+          title={'Works Just Like Your Favorite Online Stores.'}
+          description={
+            'SOROS works just like your favorite online stores—browse products, add to cart, and check out in seconds. You get real-time order updates, verified sellers, and global shipping, all with the simplicity you’re used to—only smarter, safer, and built for the future.'
+          }
+        />
       </Container>
 
       <BentoContainer>

@@ -7,6 +7,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import SplitText from 'gsap/dist/SplitText'
 import { Bento, BentoCell, BentoContainer, Container, Grid } from 'styles'
 import Image from 'next/image'
+import { CustomHeading } from 'components'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText)
 
@@ -64,21 +65,20 @@ export default function Data() {
   return (
     <section ref={sectionEl} className="relative -mt-[100vh]">
       <Container>
-        <Grid className="text-header">
-          <h2 className="anim-text-1 text-9xl font-bold col-start-1 col-end-13 mb-12">
-            Your Wallet.
-            <br />
-            Your Data.
-            <br />
-            Your Rules.
-          </h2>
-          <p className="anim-text-2 text-3xl font-medium col-start-1 col-end-9 mb-28">
-            Security and privacy are at the core of SOROS. Every transaction is
-            encrypted and processed directly on the blockchain, so your data
-            stays safe and your wallet stays in your control. We never track,
-            sell, or store personal information.
-          </p>
-        </Grid>
+        <CustomHeading
+          title={
+            <>
+              Your Wallet.
+              <br />
+              Your Data.
+              <br />
+              Your Rules.
+            </>
+          }
+          description={
+            'Security and privacy are at the core of SOROS. Every transaction is encrypted and processed directly on the blockchain, so your data stays safe and your wallet stays in your control. We never track, sell, or store personal information.'
+          }
+        />
       </Container>
 
       <BentoContainer>
