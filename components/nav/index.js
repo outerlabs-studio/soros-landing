@@ -36,7 +36,7 @@ export default function Nav() {
 
           <nav className="flex gap-5 items-center">
             <Link
-              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
+              className="hidden sm:block text-base font-medium hover:opacity-60 transition-opacity duration-300"
               href="/#features-section"
               onClick={(e) => {
                 e.preventDefault()
@@ -47,7 +47,7 @@ export default function Nav() {
               Features
             </Link>
             <Link
-              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
+              className="hidden sm:block text-base font-medium hover:opacity-60 transition-opacity duration-300"
               href="/#about-section"
               onClick={(e) => {
                 e.preventDefault()

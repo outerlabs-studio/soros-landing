@@ -41,11 +41,6 @@ export default function Side() {
         const rows = Math.floor((contH + gapPx) / (dotPx + gapPx))
         const total = cols * rows
 
-        const holeCols = centerHole ? (cols % 2 === 0 ? 4 : 5) : 0
-        const holeRows = centerHole ? (rows % 2 === 0 ? 4 : 5) : 0
-        const startCol = (cols - holeCols) / 2
-        const startRow = (rows - holeRows) / 2
-
         for (let i = 0; i < total; i++) {
           const dot = document.createElement('div')
           dot.className =
@@ -173,7 +168,7 @@ export default function Side() {
   )
 
   return (
-    <div className="w-[40vw] h-dvh fixed top-0 left-0">
+    <div className="hidden md:block fixed w-[40vw] h-dvh top-0 left-0">
       <div
         ref={containerRef}
         className="flex absolute top-0 left-0 w-full h-full gap-[2vw] justify-center items-center pointer-events-none inset-0 grid-rows-[auto] grid-cols-1 auto-cols-[1fr]"

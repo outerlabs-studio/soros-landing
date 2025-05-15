@@ -32,7 +32,7 @@ export default function Rankings() {
   }, [])
 
   return (
-    <div className="col-start-8 col-end-13 py-20">
+    <div className="col-start-1 md:col-start-8 col-end-13">
       <h3 className={HugeTextClass('mb-8')}>Rankings</h3>
 
       <div

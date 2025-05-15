@@ -4,9 +4,9 @@ import Rankings from './components/rankings'
 
 export default function Points() {
   return (
-    <section className="relative">
+    <section className="relative py-24">
       <Container>
-        <Grid className="items-center justify-center min-h-dvh">
+        <Grid className="md:items-center md:justify-center md:min-h-dvh gap-y-16">
           <Check />
           <Rankings />
         </Grid>

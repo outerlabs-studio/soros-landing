@@ -94,7 +94,7 @@ export default function Data() {
 
       <BentoContainer>
         <Bento>
-          <BentoCell className="px-[7.5vw] py-[6vw] gap-[6vw]">
+          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw] gap-[6vw]">
             <div className="flex flex-col items-center text-center">
               <p className={SmallPTextClass()}>SOROS has</p>
               <div>
@@ -129,7 +129,7 @@ export default function Data() {
               </p>
             </div>
           </BentoCell>
-          <BentoCell className="relative px-[7.5vw] pt-[6vw] gap-[6vw] justify-between">
+          <BentoCell className="relative h-fit md:h-full px-10 py-10 md:px-[7.5vw] md:py-[6vw] gap-[6vw] justify-between">
             <p className={MediumPTextClass('text-gray-text')}>
               We use blockchain technology to record key transaction details
               without exposing any personal data.{' '}
@@ -138,7 +138,7 @@ export default function Data() {
               history stays private, just the way it should be.
             </p>
 
-            <div className="absolute bottom-0 w-full h-auto">
+            <div className="relative md:absolute bottom-0 w-full h-auto">
               <Image
                 src={'/laptop.webp'}
                 alt="SOROS Order Information Page"

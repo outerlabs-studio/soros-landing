@@ -6,7 +6,7 @@ export default function Form() {
 
   return (
     <form
-      className="w-1/4 max-w-md anim-form"
+      className="md:self-center w-full max-w-100 anim-form"
       onSubmit={(e) => {
         e.preventDefault()
 

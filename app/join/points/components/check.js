@@ -53,7 +53,7 @@ export default function Check() {
   } = formik
 
   return (
-    <div className="col-start-1 col-end-6 flex flex-col">
+    <div className="col-start-1 col-end-13 md:col-end-6 flex flex-col">
       <h3 className={HugeTextClass('mb-4')}>Check Points</h3>
       {!success && (
         <p className="text-base leading-tight font-medium">

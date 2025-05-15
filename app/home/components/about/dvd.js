@@ -86,7 +86,7 @@ const DVDScreen = () => {
   const isHovered = useRef(labels.map(() => false))
 
   return (
-    <div className="elastica bg-black w-full h-full overflow-hidden">
+    <div className="elastica bg-black w-full h-100 md:h-full overflow-hidden">
       <Elastica
         config={{
           gridSize: 8,

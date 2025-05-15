@@ -8,7 +8,11 @@ export default function CustomHeading({ title, description }) {
       >
         {title}
       </h2>
-      <p className={BigTextClass('anim-text-2 col-start-1 col-end-9 mb-28')}>
+      <p
+        className={BigTextClass(
+          'anim-text-2 col-start-1 col-end-13 md:col-end-9 mb-28',
+        )}
+      >
         {description}
       </p>
     </Grid>

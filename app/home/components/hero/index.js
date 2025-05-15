@@ -18,11 +18,11 @@ export default function Hero() {
     () => {
       const splitFirst = SplitText.create('.anim-text-1', {
         charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-10',
+        linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
       })
       const splitSecond = SplitText.create('.anim-text-2', {
         charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-10',
+        linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
       })
 
       const entry = gsap.timeline({ defaults: { delay: 0.5 } })
@@ -164,9 +164,9 @@ export default function Hero() {
       id="hero-section"
       className="relative h-dvh overflow-hidden z-5"
     >
-      <div className="grid items-center justify-items-center grid-rows-3 absolute top-0 left-0 w-full h-full">
+      <div className="grid justify-items-center grid-rows-3 absolute top-0 left-0 w-full h-full">
         <div />
-        <div>
+        <div className="self-center">
           <h1
             className={DisplayTextClass(
               'anim-text-1 text-center leading-tight text-white',
@@ -191,7 +191,7 @@ export default function Hero() {
         <Form />
       </div>
 
-      <div className="anim-icon pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[140vw] origin-center">
+      <div className="anim-icon pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 portrait:size-[300vw] portrait:sm:size-[220vw] size-[240vh] origin-center">
         <Icons className="w-full h-full" name="soros-icon" />
       </div>
     </section>

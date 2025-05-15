@@ -149,7 +149,7 @@ export default function Info() {
   return (
     <section
       id="info-section"
-      className="relative z-10 -mt-[100vh]"
+      className="relative z-10 portrait:-mt-[50vw] -mt-[50vh]"
       ref={sectionEl}
     >
       <Container>
@@ -163,7 +163,7 @@ export default function Info() {
 
       <BentoContainer>
         <Bento>
-          <BentoCell className="col-span-2 px-[7.5vw] py-[6vw]">
+          <BentoCell className="col-span-2 px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
             <Marquee>
               {IMAGES.map((_, index) => (
                 <div className="relative h-120 w-70 mr-5" key={index}>
@@ -178,7 +178,7 @@ export default function Info() {
             </Marquee>
           </BentoCell>
 
-          <BentoCell className="px-[7.5vw] py-[6vw]">
+          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
             <div className="relative w-120 h-40 mb-14">
               <Image
                 className="object-contain"
@@ -197,7 +197,7 @@ export default function Info() {
               real people, not anonymous foreign storefronts.
             </p>
           </BentoCell>
-          <BentoCell className="px-[7.5vw] py-[6vw]">
+          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
             <div className="relative w-70 h-20 mb-14">
               <Image
                 className="object-contain"
@@ -247,8 +247,12 @@ export default function Info() {
             </div>
           </BentoCell>
 
-          <BentoCell className="col-span-2 px-[7.5vw] py-[6vw] justify-start items-start">
-            <p className={SmallPTextClass('text-gray-text max-w-1/2')}>
+          <BentoCell className="col-span-2 px-10 py-10 md:px-[7.5vw] md:py-[6vw] justify-start items-start">
+            <p
+              className={SmallPTextClass(
+                'text-gray-text max-w-3/4 md:max-w-1/2',
+              )}
+            >
               <span className="text-white">
                 SOROS keeps fees lower than anyone else.
               </span>{' '}
@@ -257,9 +261,9 @@ export default function Info() {
               transaction. More power in your hands.
             </p>
 
-            <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-[6vw] gap-x-8 gap-y-4 w-full">
+            <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
               <p className={BigTextClass('text-white')}>2.5%</p>
-              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[25%]">
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[35%] sm:w-[25%]">
                 <p className={BigTextClass('text-white')}>SOROS Fee</p>
               </div>
               <p className={BigTextClass('text-gray-text')}>7%</p>

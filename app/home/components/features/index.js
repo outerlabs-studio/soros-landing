@@ -60,7 +60,7 @@ const CARDS = [
 
 export default function Features() {
   return (
-    <section className="relative pt-[6vw]" id="features-section">
+    <section className="relative pt-10 md:pt-[6vw]" id="features-section">
       <Container>
         <Grid className="gap-y-5">
           <h2
@@ -73,7 +73,7 @@ export default function Features() {
 
           {CARDS.map((_, index) => (
             <Card
-              className={'col-span-6'}
+              className={'col-span-12 md:col-span-6'}
               title={_.title}
               description={_.description}
               img={_.img}

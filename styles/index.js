@@ -7,7 +7,6 @@ export {
   AlmostDisplayTextClass,
   HugeTextClass,
   BigTextClass,
-  BigPTextClass,
   MediumPTextClass,
   SmallPTextClass,
 } from './text'

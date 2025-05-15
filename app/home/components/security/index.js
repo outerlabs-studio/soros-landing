@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText)
 const Security = () => {
   const sectionRef = useRef()
 
-  const gridSize = 21 // Define the grid size (e.g., 20x20)
+  const gridSize = 15
   const items = Array.from({ length: gridSize * gridSize })
   const itemRefs = useRef([])
   const gridRef = useRef()
