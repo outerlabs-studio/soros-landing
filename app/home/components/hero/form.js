@@ -1,4 +1,4 @@
-import { CustomButton, Input } from 'components'
+import { CustomButton } from 'components'
 import { useRouter } from 'next/navigation'
 
 export default function Form() {
