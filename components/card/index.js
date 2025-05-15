@@ -11,7 +11,7 @@ export default function Card({ className, title, description, img }) {
       )}
     >
       <div
-        className={`relative w-full h-120 overflow-hidden rounded-[inherit]`}
+        className={`relative w-full h-60 sm:h-120 overflow-hidden rounded-[inherit]`}
       >
         <Image
           className="w-full h-full object-cover"
