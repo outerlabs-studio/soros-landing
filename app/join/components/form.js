@@ -10,8 +10,8 @@ import ReferralLink from './referral'
 const validationSchema = Yup.object({
   username: Yup.string().required('Username is required'),
   email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+    .required('Email is required')
+    .matches(/^[\w.-]+@[\w.-]+\.\w{2,4}$/, 'Invalid email address'),
   code: Yup.string(),
 })
 

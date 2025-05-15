@@ -176,7 +176,7 @@ export default function Side() {
     <div className="w-[40vw] h-dvh fixed top-0 left-0">
       <div
         ref={containerRef}
-        className="flex absolute top-0 left-0 w-full h-full gap-8 justify-center items-center pointer-events-none inset-0 grid-rows-[auto] grid-cols-1 auto-cols-[1fr]"
+        className="flex absolute top-0 left-0 w-full h-full gap-[2vw] justify-center items-center pointer-events-none inset-0 grid-rows-[auto] grid-cols-1 auto-cols-[1fr]"
         style={{ flexFlow: 'wrap' }}
         id="dot-container"
       />
