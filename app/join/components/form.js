@@ -102,7 +102,7 @@ export default function Form({ referral, email }) {
         <p className="text-base leading-tight font-medium">
           {success
             ? `Welcome to SOROS! You can check your points and view global rankings by clicking the links below. Every referral is 100 points.`
-            : `Join the beta wailist today and earn 100 points. Refer friends to collect even more points. Redeem your points for exclusive rewards once SOROS launches.`}
+            : `Join the beta waitlist today and earn 100 points. Refer friends to collect even more points. Redeem your points for exclusive rewards once SOROS launches.`}
         </p>
 
         {success ? (
