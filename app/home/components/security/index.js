@@ -89,7 +89,7 @@ const Security = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-screen h-screen overflow-hidden -mt-[50vh]"
+      className="relative w-screen h-lvh overflow-hidden -mt-[50vh]"
     >
       <div
         className="absolute top-1/2 left-0 w-full -translate-y-1/2 z-10"
