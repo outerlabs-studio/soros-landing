@@ -9,6 +9,8 @@ const CARDS = [
     img: {
       src: '/cards/cryptos.webp',
       alt: 'Crypto select dropdown',
+      sizes:
+        '(min-width: 1280px) 544px, (min-width: 1040px) calc(25.45vw + 223px), (min-width: 780px) calc(8.33vw + 393px), calc(100vw - 42px)',
     },
   },
   {
@@ -18,6 +20,8 @@ const CARDS = [
     img: {
       src: '/cards/seller.webp',
       alt: 'Crypto sellers',
+      sizes:
+        '(min-width: 780px) 608px, (min-width: 380px) calc(100vw - 42px), calc(25vw + 228px)',
     },
   },
   {
@@ -27,6 +31,8 @@ const CARDS = [
     img: {
       src: '/cards/custom.webp',
       alt: 'Customized Items',
+      sizes:
+        '(min-width: 780px) 580px, (min-width: 380px) calc(100vw - 42px), calc(48.33vw + 144px)',
     },
   },
   {
@@ -36,6 +42,8 @@ const CARDS = [
     img: {
       src: '/cards/support.webp',
       alt: 'SOROS help page',
+      sizes:
+        '(min-width: 640px) 770px, (min-width: 460px) calc(100vw - 42px), calc(10vw + 354px)',
     },
   },
   {
@@ -45,6 +53,8 @@ const CARDS = [
     img: {
       src: '/cards/updates.webp',
       alt: 'SOROS help page',
+      sizes:
+        '(min-width: 780px) 576px, (min-width: 400px) calc(100vw - 42px), calc(63.75vw + 96px)',
     },
   },
   {
@@ -54,6 +64,8 @@ const CARDS = [
     img: {
       src: '/cards/categories.webp',
       alt: 'SOROS categories',
+      sizes:
+        '(min-width: 780px) 568px, (min-width: 400px) calc(100vw - 42px), calc(67.5vw + 82px)',
     },
   },
 ]

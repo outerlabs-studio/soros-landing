@@ -24,38 +24,47 @@ const IMAGES = [
   {
     src: '/products/jewelry1.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/watch1.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/tech3.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/watch2.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/jewelry2.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/tech1.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/watch3.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/jewelry3.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
   {
     src: '/products/tech2.webp',
     alt: 'Watch',
+    sizes: '(min-width: 780px) 280px, 160px',
   },
 ]
 
@@ -174,6 +183,7 @@ export default function Info() {
                     className="object-contain"
                     src={_?.src}
                     alt={_?.alt}
+                    sizes={_?.sizes}
                     fill
                   />
                 </div>
@@ -187,6 +197,7 @@ export default function Info() {
                 className="object-contain"
                 src="/reviews.webp"
                 alt="SOROS Review System"
+                sizes="(min-width: 780px) 480px, (min-width: 720px) calc(7.5vw + 525px), calc(86.75vw - 26px)"
                 fill
               />
             </div>
@@ -206,6 +217,7 @@ export default function Info() {
                 className="object-contain"
                 src="/crypto.webp"
                 alt="SOROS Crypto"
+                sizes="280px"
                 fill
               />
             </div>

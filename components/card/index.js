@@ -17,6 +17,7 @@ export default function Card({ className, title, description, img }) {
           className="w-full h-full object-cover"
           src={img?.src}
           alt={img?.alt}
+          sizes={img?.sizes}
           fill
         />
       </div>

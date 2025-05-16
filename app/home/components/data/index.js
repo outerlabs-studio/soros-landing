@@ -142,6 +142,9 @@ export default function Data() {
                 alt="SOROS Order Information Page"
                 fill
                 className="relative! w-full h-full object-contain"
+                sizes={
+                  '(min-width: 2120px) 996px, (min-width: 780px) calc(46.14vw + 30px), calc(100vw - 40px)'
+                }
               />
             </div>
           </BentoCell>
