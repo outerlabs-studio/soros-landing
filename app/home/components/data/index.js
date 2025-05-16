@@ -94,13 +94,13 @@ export default function Data() {
 
       <BentoContainer>
         <Bento>
-          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw] gap-[6vw]">
+          <BentoCell className="px-5 py-10 md:px-[7.5vw] md:py-[6vw] gap-20 md:gap-[6vw]">
             <div className="flex flex-col items-center text-center">
               <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className={AlmostDisplayTextClass()}>
+                <p className={DisplayTextClass()}>
                   No{' '}
-                  <span className={DisplayTextClass('text-light-purple')}>
+                  <span className={AlmostDisplayTextClass('text-light-purple')}>
                     KYC
                   </span>
                 </p>
@@ -115,9 +115,9 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className={AlmostDisplayTextClass()}>
+                <p className={DisplayTextClass()}>
                   No{' '}
-                  <span className={DisplayTextClass('text-light-purple')}>
+                  <span className={AlmostDisplayTextClass('text-light-purple')}>
                     DATA
                   </span>
                 </p>
@@ -129,7 +129,7 @@ export default function Data() {
               </p>
             </div>
           </BentoCell>
-          <BentoCell className="relative h-fit md:h-full px-10 py-10 md:px-[7.5vw] md:py-[6vw] gap-[6vw] justify-between">
+          <BentoCell className="relative h-fit md:h-full px-5 py-10 md:px-[7.5vw] md:py-[6vw] gap-[6vw] justify-between">
             <p className={MediumPTextClass('text-gray-text')}>
               We use blockchain technology to record key transaction details
               without exposing any personal data.{' '}

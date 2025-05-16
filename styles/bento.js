@@ -16,7 +16,7 @@ export function Bento(props) {
   return (
     <div
       className={twMerge(
-        `bg-light-gray border-1 border-solid border-light-gray md:grid gap-[1px] justify-items-stretch w-full relative left-[-1px] mx-auto max-w-[2000px] flex flex-col md:grid-cols-2`,
+        `bg-light-gray border-1 border-solid border-light-gray md:grid gap-[1px] justify-items-stretch w-[calc(100%+2px)] relative left-[-1px] mr-[-2px] mx-auto max-w-[2000px] flex flex-col md:grid-cols-2`,
         props.className,
       )}
     >

@@ -163,7 +163,7 @@ export default function Info() {
 
       <BentoContainer>
         <Bento>
-          <BentoCell className="col-span-2 px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
+          <BentoCell className="col-span-2 px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
             <Marquee>
               {IMAGES.map((_, index) => (
                 <div className="relative h-120 w-70 mr-5" key={index}>
@@ -178,7 +178,7 @@ export default function Info() {
             </Marquee>
           </BentoCell>
 
-          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
+          <BentoCell className="px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
             <div className="relative w-120 h-40 mb-14">
               <Image
                 className="object-contain"
@@ -197,7 +197,7 @@ export default function Info() {
               real people, not anonymous foreign storefronts.
             </p>
           </BentoCell>
-          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
+          <BentoCell className="px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
             <div className="relative w-70 h-20 mb-14">
               <Image
                 className="object-contain"
@@ -228,7 +228,7 @@ export default function Info() {
           <BentoCell className="grid grid-rows-[1fr_auto] col-start-2 row-start-2 row-span-2 overflow-hidden">
             <DVDScreen />
 
-            <div className="px-[7.5vw] py-[6vw]">
+            <div className="px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
               <h3 className={HugeTextClass('mb-8')}>
                 Every Category
                 <br />
@@ -247,7 +247,7 @@ export default function Info() {
             </div>
           </BentoCell>
 
-          <BentoCell className="col-span-2 px-10 py-10 md:px-[7.5vw] md:py-[6vw] justify-start items-start">
+          <BentoCell className="col-span-2 px-5 py-10 md:px-[7.5vw] md:py-[6vw] justify-start items-start">
             <p
               className={SmallPTextClass(
                 'text-gray-text max-w-3/4 md:max-w-1/2',
@@ -263,12 +263,16 @@ export default function Info() {
 
             <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
               <p className={BigTextClass('text-white')}>3.5%</p>
-              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple px-6 py-10 w-[35%]">
-                <p className={BigTextClass('text-white')}>SOROS Fee</p>
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple py-5 md:px-6 md:py-10 w-[45%] md:w-[35%]">
+                <p className={BigTextClass('text-white whitespace-nowrap')}>
+                  SOROS Fee
+                </p>
               </div>
               <p className={BigTextClass('text-gray-text')}>7%</p>
-              <div className="anim-bar rounded-xl flex items-center justify-center bg-dark-gray px-6 py-10 w-full">
-                <p className={BigTextClass('text-white')}>Others Fee</p>
+              <div className="anim-bar rounded-xl flex items-center justify-center bg-dark-gray py-5 md:px-6 md:py-10 w-full">
+                <p className={BigTextClass('text-white whitespace-nowrap')}>
+                  Others Fee
+                </p>
               </div>
             </div>
           </BentoCell>

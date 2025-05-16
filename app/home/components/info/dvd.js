@@ -7,6 +7,7 @@ import Elastica, {
   initalConditionsPresets,
   useElastica,
 } from '@darkroom.engineering/elastica/react'
+import { BigTextClass } from 'styles'
 
 const params = {
   gridSize: 8,
@@ -39,7 +40,7 @@ const DVDScreen = () => {
   const isHovered = useRef(labels.map(() => false))
 
   return (
-    <div className="relative elastica bg-black w-full h-full overflow-hidden">
+    <div className="relative elastica bg-black w-full h-90 md:h-full overflow-hidden">
       <div className="z-10 pointer-events-none absolute top-0 left-0 w-full h-full bg-radial from-black/10 to-black" />
       <Elastica
         config={{
@@ -128,7 +129,7 @@ function Item({ data, index, isHovered }) {
           target.classList.toggle('grabbed', false)
         }}
       >
-        <p className="text-3xl font-medium text-white">{data}</p>
+        <p className={BigTextClass('text-white')}>{data}</p>
       </div>
     </AxisAlignedBoundaryBox>
   )

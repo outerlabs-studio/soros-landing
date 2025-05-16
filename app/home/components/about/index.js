@@ -87,7 +87,7 @@ export default function About() {
         <Bento className={``}>
           <DVDScreen />
 
-          <BentoCell className="px-10 py-10 md:px-[7.5vw] md:py-[6vw]">
+          <BentoCell className="px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
             <p className={MediumPTextClass('text-gray-text')}>
               SOROS is a decentralized marketplace built for the future of
               shopping. No banks, no borders, no middlemen. Buyers can check out
