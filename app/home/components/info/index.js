@@ -256,13 +256,13 @@ export default function Info() {
               <span className="text-white">
                 SOROS keeps fees lower than anyone else.
               </span>{' '}
-              With just a 3.5% fee, you get a better deal than the 7% or more
+              With just a 4.5% fee, you get a better deal than the 7% or more
               charged by other crypto marketplaces. More value in every
               transaction. More power in your hands.
             </p>
 
             <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
-              <p className={BigTextClass('text-white')}>3.5%</p>
+              <p className={BigTextClass('text-white')}>4.5%</p>
               <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple py-5 md:px-6 md:py-10 w-[45%] md:w-[35%]">
                 <p className={BigTextClass('text-white whitespace-nowrap')}>
                   SOROS Fee
