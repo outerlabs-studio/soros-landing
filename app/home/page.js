@@ -2,6 +2,7 @@ import {
   About,
   Data,
   Features,
+  Footer,
   Hero,
   Info,
   Requests,
@@ -18,6 +19,7 @@ export default function Home() {
       <Security />
       <Data />
       <Features />
+      <Footer />
     </>
   )
 }

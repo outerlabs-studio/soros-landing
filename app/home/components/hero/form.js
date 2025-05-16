@@ -1,3 +1,5 @@
+'use client'
+
 import { CustomButton } from 'components'
 import { useRouter } from 'next/navigation'
 
