@@ -166,7 +166,10 @@ export default function Info() {
           <BentoCell className="col-span-2 px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
             <Marquee>
               {IMAGES.map((_, index) => (
-                <div className="relative h-120 w-70 mr-5" key={index}>
+                <div
+                  className="relative w-40 h-90 md:h-120 md:w-70 mr-5"
+                  key={index}
+                >
                   <Image
                     className="object-contain"
                     src={_?.src}
@@ -179,7 +182,7 @@ export default function Info() {
           </BentoCell>
 
           <BentoCell className="px-5 py-10 md:px-[7.5vw] md:py-[6vw]">
-            <div className="relative w-120 h-40 mb-14">
+            <div className="relative w-[90%] md:w-120 h-40 mb-14">
               <Image
                 className="object-contain"
                 src="/reviews.webp"

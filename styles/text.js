@@ -7,7 +7,10 @@ export function DisplayTextClass(className) {
   )
 }
 export function AlmostDisplayTextClass(className) {
-  return twMerge('text-6xl sm:text-8xl font-bold leading-none', className)
+  return twMerge(
+    'text-4xl sm:text-6xl lg:text-8xl font-bold leading-none',
+    className,
+  )
 }
 export function HugeTextClass(className) {
   return twMerge('text-4xl md:text-5xl leading-tight font-bold', className)

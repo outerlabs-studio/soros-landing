@@ -12,8 +12,6 @@ import {
   BentoContainer,
   Container,
   DisplayTextClass,
-  Grid,
-  HugeTextClass,
   MediumPTextClass,
   SmallPTextClass,
 } from 'styles'
@@ -98,9 +96,9 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className={DisplayTextClass()}>
+                <p className={AlmostDisplayTextClass()}>
                   No{' '}
-                  <span className={AlmostDisplayTextClass('text-light-purple')}>
+                  <span className={DisplayTextClass('text-light-purple')}>
                     KYC
                   </span>
                 </p>
@@ -115,9 +113,9 @@ export default function Data() {
             <div className="flex flex-col items-center text-center">
               <p className={SmallPTextClass()}>SOROS has</p>
               <div>
-                <p className={DisplayTextClass()}>
+                <p className={AlmostDisplayTextClass()}>
                   No{' '}
-                  <span className={AlmostDisplayTextClass('text-light-purple')}>
+                  <span className={DisplayTextClass('text-light-purple')}>
                     DATA
                   </span>
                 </p>
