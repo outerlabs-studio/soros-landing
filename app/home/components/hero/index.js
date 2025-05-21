@@ -162,7 +162,7 @@ export default function Hero() {
     <section
       ref={sectionEl}
       id="hero-section"
-      className="relative h-lvh! h-max-unset! overflow-hidden z-5"
+      className="relative h-(--full-height)! h-max-unset! overflow-hidden z-5"
     >
       <div className="grid justify-items-center grid-rows-3 absolute top-0 left-0 w-full h-full">
         <div />
