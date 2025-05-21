@@ -84,7 +84,7 @@ export default function Form({ referral, email }) {
   } = formik
 
   return (
-    <div id="form-wrapper" className="md:ml-[40vw] px-10 w-full">
+    <div id="form-wrapper" className="md:ml-[40vw] px-5 md:px-10 w-full">
       <div className="flex flex-col w-full min-h-full justify-center max-w-150 py-4 mx-auto">
         <h3 className={HugeTextClass('mb-4')}>
           {success ? (
