@@ -33,22 +33,6 @@ export default function Footer() {
             >
               X (Twitter)
             </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/soros"
-              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
-            >
-              Instagram
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/company/shopsoros"
-              className="text-base font-medium hover:opacity-60 transition-opacity duration-300"
-            >
-              LinkedIn
-            </a>
           </div>
         </div>
       </Container>
