@@ -60,6 +60,17 @@
   visibility: visible !important;
 }
 
+/* Mobile input focus fix - prevent title text from disappearing when input is focused */
+.input-focused .anim-text-1 {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.input-focused .anim-text-2 {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 :root {
   overscroll-behavior: none;
 }
