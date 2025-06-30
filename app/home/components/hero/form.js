@@ -2,36 +2,13 @@
 
 import { CustomButton } from 'components'
 import { useRouter } from 'next/navigation'
-import { useState, useEffect } from 'react'
-import { useLenis } from 'lenis/react'
 
-export default function Form({ onFocus, onBlur }) {
+export default function Form() {
   const router = useRouter()
-  const lenis = useLenis()
-  const [isFocused, setIsFocused] = useState(false)
-
-  // Lock/unlock scroll when input is focused
-  useEffect(() => {
-    if (isFocused) {
-      lenis?.stop()
-    } else {
-      lenis?.start()
-    }
-  }, [isFocused, lenis])
-
-  const handleFocus = () => {
-    setIsFocused(true)
-    onFocus?.()
-  }
-
-  const handleBlur = () => {
-    setIsFocused(false)
-    onBlur?.()
-  }
 
   return (
     <form
-      className={`md:self-center px-5 w-full max-w-100 anim-form ${isFocused ? 'input-focused' : ''}`}
+      className="md:self-center px-5 w-full max-w-100 anim-form"
       onSubmit={(e) => {
         e.preventDefault()
 
@@ -46,8 +23,10 @@ export default function Form({ onFocus, onBlur }) {
             name="email"
             type="email"
             placeholder="Email"
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+            onFocus={(e) => {
+              e.preventDefault()
+              e.target.focus({ preventScroll: true })
+            }}
           />
           <CustomButton
             staticAnim
