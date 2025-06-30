@@ -53,6 +53,13 @@
     }
   }
 }
+
+/* Mobile input focus fix - prevent form from fading when input is focused */
+.input-focused .anim-inner-form {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 :root {
   overscroll-behavior: none;
 }

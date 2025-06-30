@@ -2,13 +2,25 @@
 
 import { CustomButton } from 'components'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 
-export default function Form() {
+export default function Form({ onFocus, onBlur }) {
   const router = useRouter()
+  const [isFocused, setIsFocused] = useState(false)
+
+  const handleFocus = () => {
+    setIsFocused(true)
+    onFocus?.()
+  }
+
+  const handleBlur = () => {
+    setIsFocused(false)
+    onBlur?.()
+  }
 
   return (
     <form
-      className="md:self-center px-5 w-full max-w-100 anim-form"
+      className={`md:self-center px-5 w-full max-w-100 anim-form ${isFocused ? 'input-focused' : ''}`}
       onSubmit={(e) => {
         e.preventDefault()
 
@@ -23,6 +35,8 @@ export default function Form() {
             name="email"
             type="email"
             placeholder="Email"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
           <CustomButton
             staticAnim
