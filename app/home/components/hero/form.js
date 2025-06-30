@@ -23,10 +23,6 @@ export default function Form() {
             name="email"
             type="email"
             placeholder="Email"
-            onFocus={(e) => {
-              e.preventDefault()
-              e.target.focus({ preventScroll: true })
-            }}
           />
           <CustomButton
             staticAnim
