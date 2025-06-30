@@ -8,7 +8,7 @@ export default function Form() {
 
   return (
     <form
-      className="md:self-center px-5 w-full max-w-100 anim-form"
+      className="hidden sm:block md:self-center px-5 w-full max-w-100 anim-form"
       onSubmit={(e) => {
         e.preventDefault()
 

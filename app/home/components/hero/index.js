@@ -5,9 +5,9 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import SplitText from 'gsap/dist/SplitText'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-import { Icons } from 'components'
+import { CustomButton, Icons } from 'components'
 import Form from './form'
-import { DisplayTextClass } from 'styles'
+import { DisplayTextClass, SmallPTextClass } from 'styles'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, useGSAP)
 
@@ -16,6 +16,8 @@ export default function Hero() {
 
   useGSAP(
     () => {
+      let mm = gsap.matchMedia()
+
       const splitFirst = SplitText.create('.anim-text-1', {
         charsClass: 'block',
         linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
@@ -154,6 +156,13 @@ export default function Hero() {
           autoAlpha: 0,
           duration: 1,
         })
+
+      mm.add('(max-width: 640px)', () => {
+        tl.from(document.getElementById('nav'), {
+          autoAlpha: 0,
+          duration: 1,
+        })
+      })
     },
     { dependencies: [sectionEl], scope: sectionEl },
   )
@@ -188,7 +197,27 @@ export default function Hero() {
             Globally
           </h1>
         </div>
+
         <Form />
+
+        <div className="block sm:hidden anim-form">
+          <div className="anim-inner-form flex flex-col items-center gap-4">
+            <CustomButton
+              primary
+              href="/join"
+              className={'anim-inner-form'}
+              onClick={() => {
+                track('Join', { location: 'navigation' })
+              }}
+            >
+              Join Beta
+            </CustomButton>
+
+            <p className="text-xs font-medium text-gray-text">
+              Scroll for more
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="anim-icon pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 portrait:size-[300vw] portrait:sm:size-[220vw] size-[240vh] origin-center">
