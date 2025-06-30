@@ -2,11 +2,22 @@
 
 import { CustomButton } from 'components'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLenis } from 'lenis/react'
 
 export default function Form({ onFocus, onBlur }) {
   const router = useRouter()
+  const lenis = useLenis()
   const [isFocused, setIsFocused] = useState(false)
+
+  // Lock/unlock scroll when input is focused
+  useEffect(() => {
+    if (isFocused) {
+      lenis?.stop()
+    } else {
+      lenis?.start()
+    }
+  }, [isFocused, lenis])
 
   const handleFocus = () => {
     setIsFocused(true)
