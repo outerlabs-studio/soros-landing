@@ -22,48 +22,70 @@ export default function About() {
 
   useGSAP(
     () => {
-      const splitFirst = SplitText.create('.anim-text-1', {
-        charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-1',
-      })
-      const splitSecond = SplitText.create('.anim-text-2', {
-        charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-1',
+      let mm = gsap.matchMedia()
+
+      mm.add('(prefers-reduced-motion: reduce)', () => {
+        // Remove negative margin top from SplitText
+        const splitFirst = SplitText.create('.anim-text-1', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden',
+        })
+        const splitSecond = SplitText.create('.anim-text-2', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden',
+        })
+        gsap.set(splitFirst.words, { y: 0, autoAlpha: 1 })
+        gsap.set(splitSecond.words, { y: 0, autoAlpha: 1 })
+        // Remove negative margin top from section
+        const section = document.getElementById('about-section')
+        if (section) section.classList.remove('-mt-[100vh]')
+        return () => {};
       })
 
-      const master = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionEl.current,
-          start: `top bottom`,
-          end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} center`,
-          scrub: true,
-          pinSpacing: false,
-        },
-      })
+      mm.add('not (prefers-reduced-motion: reduce)', () => {
+        const splitFirst = SplitText.create('.anim-text-1', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden -mt-1',
+        })
+        const splitSecond = SplitText.create('.anim-text-2', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden -mt-1',
+        })
 
-      master
-        .from(
-          splitFirst.words,
-          {
-            y: 130,
-            duration: 2.5,
-            stagger: 0.1,
-            ease: 'power3.out',
-            autoAlpha: 0,
+        const master = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionEl.current,
+            start: `top bottom`,
+            end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} center`,
+            scrub: true,
+            pinSpacing: false,
           },
-          0,
-        )
-        .from(
-          splitSecond.words,
-          {
-            y: 130,
-            duration: 1.5,
-            stagger: 0.02,
-            ease: 'power3.out',
-            autoAlpha: 0,
-          },
-          0,
-        )
+        })
+
+        master
+          .from(
+            splitFirst.words,
+            {
+              y: 130,
+              duration: 2.5,
+              stagger: 0.1,
+              ease: 'power3.out',
+              autoAlpha: 0,
+            },
+            0,
+          )
+          .from(
+            splitSecond.words,
+            {
+              y: 130,
+              duration: 1.5,
+              stagger: 0.02,
+              ease: 'power3.out',
+              autoAlpha: 0,
+            },
+            0,
+          )
+      })
     },
     { dependencies: [sectionEl], scope: sectionEl },
   )

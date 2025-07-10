@@ -18,144 +18,167 @@ export default function Hero() {
     () => {
       let mm = gsap.matchMedia()
 
-      const splitFirst = SplitText.create('.anim-text-1', {
-        charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
-      })
-      const splitSecond = SplitText.create('.anim-text-2', {
-        charsClass: 'block',
-        linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
-      })
-
-      const entry = gsap.timeline({ defaults: { delay: 0.5 } })
-
-      entry
-        .from(
-          splitFirst.words,
-          {
-            y: 130,
-            duration: 1.5,
-            stagger: 0.1,
-            ease: 'power3.out',
-          },
-          0,
-        )
-        .from(
-          '.bracket',
-          {
-            scale: 0,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: 'power3.out',
-          },
-          0,
-        )
-        .from(
-          '.anim-form',
-          { autoAlpha: 0, duration: 1, ease: 'power3.out' },
-          0,
-        )
-        .from(
-          document.getElementById('nav'),
-          { yPercent: -100, duration: 1, ease: 'power3.out' },
-          0,
-        )
-
-      const spinTween = gsap.to('.anim-icon', {
-        rotation: 360,
-        duration: 15,
-        ease: 'linear',
-        repeat: -1,
-      })
-      let resetTimeout
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionEl.current,
-          start: 'top top',
-          end: '+=3000',
-          scrub: true,
-          pin: true,
-          onUpdate: (self) => {
-            clearTimeout(resetTimeout)
-            const vel = self.getVelocity()
-            const speed = gsap.utils.clamp(0.5, 5, Math.abs(vel) / 200)
-
-            if (vel > 0.1) {
-              gsap.to(spinTween, {
-                timeScale: speed,
-                duration: 0.3,
-                ease: 'linear',
-              })
-            } else if (vel < -0.1) {
-              gsap.to(spinTween, {
-                timeScale: -speed,
-                duration: 0.3,
-                ease: 'linear',
-              })
-            }
-
-            resetTimeout = window.setTimeout(() => {
-              gsap.to(spinTween, {
-                timeScale: 1,
-                duration: 0.5,
-                ease: 'linear',
-              })
-            }, 150)
-          },
-        },
-      })
-
-      tl.to('.anim-inner-form', { autoAlpha: 0, duration: 1.5 }, 0)
-        .to(
-          splitFirst.words,
-          {
-            autoAlpha: 0,
-            duration: 1.5,
-            stagger: 0.1,
-            ease: 'power3.out',
-          },
-          0,
-        )
-        .from(
-          splitSecond.words,
-          {
-            yPercent: 100,
-            duration: 2,
-            stagger: 0.1,
-            autoAlpha: 0,
-            ease: 'power3.out',
-          },
-          1.5,
-        )
-        .to(
-          splitSecond.words,
-          {
-            opacity: 0,
-            duration: 1.5,
-            stagger: 0.1,
-            ease: 'power3.out',
-          },
-          4,
-        )
-        .to(
-          '.anim-icon',
-          {
-            scale: 0.1,
-            duration: 12,
-          },
-          0,
-        )
-        .to(
-          sectionEl.current,
-          { autoAlpha: 0, duration: 4, ease: 'linear' },
-          '<60%',
-        )
-        .from(document.getElementById('nav-logo'), {
-          autoAlpha: 0,
-          duration: 1,
+      mm.add('(prefers-reduced-motion: reduce)', () => {
+        // Remove negative margin top from SplitText
+        const splitFirst = SplitText.create('.anim-text-1', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden',
         })
+        const splitSecond = SplitText.create('.anim-text-2', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden',
+        })
+        // Remove animation by setting elements to final state
+        gsap.set(splitFirst.words, { y: 0, autoAlpha: 1 })
+        gsap.set(splitSecond.words, { y: 0, autoAlpha: 0 })
+        gsap.set('.anim-form', { autoAlpha: 1 })
+        gsap.set('.anim-icon', { rotation: 0, scale: 1 })
+        gsap.set(sectionEl.current, { autoAlpha: 1 })
+        gsap.set(document.getElementById('nav'), { yPercent: 0 })
+        gsap.set(document.getElementById('nav-logo'), { autoAlpha: 1 })
+        return () => {}
+      })
+
+      mm.add('not (prefers-reduced-motion: reduce)', () => {
+        const splitFirst = SplitText.create('.anim-text-1', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
+        })
+        const splitSecond = SplitText.create('.anim-text-2', {
+          charsClass: 'block',
+          linesClass: 'overflow-hidden -mt-2 sm:-mt-6 lg:-mt-10',
+        })
+
+        const entry = gsap.timeline({ defaults: { delay: 0.5 } })
+
+        entry
+          .from(
+            splitFirst.words,
+            {
+              y: 130,
+              duration: 1.5,
+              stagger: 0.1,
+              ease: 'power3.out',
+            },
+            0,
+          )
+          .from(
+            '.bracket',
+            {
+              scale: 0,
+              opacity: 0,
+              duration: 1,
+              stagger: 0.1,
+              ease: 'power3.out',
+            },
+            0,
+          )
+          .from(
+            '.anim-form',
+            { autoAlpha: 0, duration: 1, ease: 'power3.out' },
+            0,
+          )
+          .from(
+            document.getElementById('nav'),
+            { yPercent: -100, duration: 1, ease: 'power3.out' },
+            0,
+          )
+
+        const spinTween = gsap.to('.anim-icon', {
+          rotation: 360,
+          duration: 15,
+          ease: 'linear',
+          repeat: -1,
+        })
+        let resetTimeout
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionEl.current,
+            start: 'top top',
+            end: '+=3000',
+            scrub: true,
+            pin: true,
+            onUpdate: (self) => {
+              clearTimeout(resetTimeout)
+              const vel = self.getVelocity()
+              const speed = gsap.utils.clamp(0.5, 5, Math.abs(vel) / 200)
+
+              if (vel > 0.1) {
+                gsap.to(spinTween, {
+                  timeScale: speed,
+                  duration: 0.3,
+                  ease: 'linear',
+                })
+              } else if (vel < -0.1) {
+                gsap.to(spinTween, {
+                  timeScale: -speed,
+                  duration: 0.3,
+                  ease: 'linear',
+                })
+              }
+
+              resetTimeout = window.setTimeout(() => {
+                gsap.to(spinTween, {
+                  timeScale: 1,
+                  duration: 0.5,
+                  ease: 'linear',
+                })
+              }, 150)
+            },
+          },
+        })
+
+        tl.to('.anim-inner-form', { autoAlpha: 0, duration: 1.5 }, 0)
+          .to(
+            splitFirst.words,
+            {
+              autoAlpha: 0,
+              duration: 1.5,
+              stagger: 0.1,
+              ease: 'power3.out',
+            },
+            0,
+          )
+          .from(
+            splitSecond.words,
+            {
+              yPercent: 100,
+              duration: 2,
+              stagger: 0.1,
+              autoAlpha: 0,
+              ease: 'power3.out',
+            },
+            1.5,
+          )
+          .to(
+            splitSecond.words,
+            {
+              opacity: 0,
+              duration: 1.5,
+              stagger: 0.1,
+              ease: 'power3.out',
+            },
+            4,
+          )
+          .to(
+            '.anim-icon',
+            {
+              scale: 0.1,
+              duration: 12,
+            },
+            0,
+          )
+          .to(
+            sectionEl.current,
+            { autoAlpha: 0, duration: 4, ease: 'linear' },
+            '<60%',
+          )
+          .from(document.getElementById('nav-logo'), {
+            autoAlpha: 0,
+            duration: 1,
+          })
+      })
 
       mm.add('(max-width: 640px)', () => {
         tl.from(document.getElementById('nav'), {
