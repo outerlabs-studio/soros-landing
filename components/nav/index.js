@@ -41,7 +41,8 @@ export default function Nav() {
               onClick={(e) => {
                 e.preventDefault()
 
-                lenis.scrollTo('#features-section')
+                if (pathname !== '/') router.push('/#features-section')
+                else lenis.scrollTo('#features-section')
               }}
             >
               Features
@@ -52,6 +53,7 @@ export default function Nav() {
               onClick={(e) => {
                 e.preventDefault()
 
+                if (pathname !== '/') router.push('/#about-section')
                 lenis.scrollTo('#about-section')
               }}
             >

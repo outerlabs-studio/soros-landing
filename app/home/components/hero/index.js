@@ -181,10 +181,14 @@ export default function Hero() {
       })
 
       mm.add('(max-width: 640px)', () => {
-        tl.from(document.getElementById('nav'), {
-          autoAlpha: 0,
-          duration: 1,
-        })
+        const nav = document.getElementById('nav')
+        if (nav) {
+          const mobileTl = gsap.timeline()
+          mobileTl.from(nav, {
+            autoAlpha: 0,
+            duration: 1,
+          })
+        }
       })
     },
     { dependencies: [sectionEl], scope: sectionEl },
