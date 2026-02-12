@@ -58,9 +58,9 @@ const CARDS = [
     },
   },
   {
-    title: 'Shop Anything',
+    title: 'Shop Favorites',
     description:
-      'Can’t find a specific product? SOROS AI shops on your favorite websites and checkouts for you using crypto.',
+      'SOROS AI helps you discover products across categories and completes checkout seamlessly with crypto.',
     img: {
       src: '/cards/categories.webp',
       alt: 'SOROS categories',
