@@ -100,7 +100,7 @@ export default function About() {
         <CustomHeading
           title={'The World’s First Decentralized Marketplace.'}
           description={
-            "SOROS is the world’s first online marketplace that connects global crypto consumers with sellers, creating an easy, secure way to shop with crypto. Every store on our marketplace is thoroughly vetted, so you can buy with peace of mind, knowing you're dealing with trusted sellers."
+            "SOROS is the world’s first online marketplace that connects global crypto consumers with sellers, creating an easy, secure way to shop with crypto. Every store on our marketplace is carefully vetted, so you can buy with peace of mind, knowing you're dealing with trusted sellers."
           }
         />
       </Container>

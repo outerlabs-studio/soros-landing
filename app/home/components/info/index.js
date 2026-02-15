@@ -90,7 +90,7 @@ export default function Info() {
         // Remove negative margin top from section
         const section = document.getElementById('info-section')
         if (section) section.classList.remove('-mt-[50vh]')
-        return () => {};
+        return () => { };
       })
 
       mm.add('not (prefers-reduced-motion: reduce)', () => {
@@ -108,7 +108,7 @@ export default function Info() {
             trigger: sectionEl.current,
             start: `top bottom`,
             end: `top+=${document.getElementsByClassName(`text-header`)[0].offsetHeight} center`,
-            scrub: true,
+            scrub: 2,
             pinSpacing: false,
           },
         })
@@ -149,7 +149,7 @@ export default function Info() {
           start: `top bottom`,
           end: `bottom center+=25%`,
           pinSpacing: false,
-          scrub: true,
+          scrub: 2,
         },
       })
 
@@ -293,19 +293,15 @@ export default function Info() {
               <span className="text-white">
                 SOROS keeps fees lower than anyone else.
               </span>{' '}
-              With just a 4.5% fee, you get a better deal than the 7% or more
-              charged by other crypto marketplaces. More value in every
-              transaction. More power in your hands.
+              Traditional Marketplaces often charge 7% - 15%. More value in every transaction. More power in your hands.
             </p>
 
-            <div className="anim-bars grid grid-cols-[auto_1fr] grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
-              <p className={BigTextClass('text-white')}>4.5%</p>
+            <div className="anim-bars grid grid-cols-1 grid-rows-2 items-center pt-10 md:pt-[6vw] gap-x-8 gap-y-4 w-full text-center">
               <div className="anim-bar rounded-xl flex items-center justify-center bg-linear-to-r from-light-purple to-purple py-5 md:px-6 md:py-10 w-[45%] md:w-[35%]">
                 <p className={BigTextClass('text-white whitespace-nowrap')}>
                   SOROS Fee
                 </p>
               </div>
-              <p className={BigTextClass('text-gray-text')}>7%</p>
               <div className="anim-bar rounded-xl flex items-center justify-center bg-dark-gray py-5 md:px-6 md:py-10 w-full">
                 <p className={BigTextClass('text-white whitespace-nowrap')}>
                   Others Fee

@@ -16,7 +16,7 @@ const CARDS = [
   {
     title: 'Verified Sellers',
     description:
-      'Every store on our marketplace is thoroughly vetted and verified, so you can buy with peace of mind.',
+      'Every store on our marketplace is carefully vetted and verified, so you can buy with peace of mind.',
     img: {
       src: '/cards/seller.webp',
       alt: 'Crypto sellers',
